@@ -1,3 +1,8 @@
+@mixin spinnervariant($color) {
+    border: solid $border-width $color;
+    border-right-color: transparent;
+}
+
 @keyframes spinner {
     to {
         transform: rotate(360deg);
@@ -6,17 +11,39 @@
 
 .spinner {
     position: relative;
+    height: 2em;
+    width: 2em;
 
     &::before {
+        @include spinnervariant($darkgray);
         content: '';
         height: 1.5em;
         width: 1.5em;
         position: absolute;
-        border: solid $border-width $darkergray;
         border-radius: 1.5em;
-        border-right-color: transparent;
         animation: spinner 0.75s linear infinite;
         top: 0;
         left: 0;
+    }
+
+    &.is-success {
+        &::before {
+            @include spinnervariant($darkgreen);
+        }
+    }
+    &.is-warning {
+        &::before {
+            @include spinnervariant($darkyellow);
+        }
+    }
+    &.is-danger {
+        &::before {
+            @include spinnervariant($darkred);
+        }
+    }
+    &.is-info {
+        &::before {
+            @include spinnervariant($darkblue);
+        }
     }
 }
