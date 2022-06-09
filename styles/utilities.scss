@@ -83,11 +83,13 @@
         margin-left: #{$size}px;
     }
 
+    .space-#{$size} > * {
+        margin: #{$size}px;
+    }
     .space-y-#{$size} > * {
         margin-top: #{$size}px;
         margin-bottom: #{$size}px;
     }
-
     .space-x-#{$size} > * {
         margin-left: #{$size}px;
         margin-right: #{$size}px;
