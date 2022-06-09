@@ -1,0 +1,69 @@
+$depth: 6px;
+
+@mixin buttonvariant($base, $dark, $darker) {
+    background-color: $base;
+    border: solid $border-width $dark;
+    box-shadow: -1px 1px 0.1px $darker,
+    -2px 2px 0.1px $darker,
+    -3px 3px 0.1px $darker,
+    -4px 4px 0.1px $darker,
+    -5px 5px 0.1px $darker,
+    -$depth $depth 0.1px $darker;
+    color: $darker;
+    &:hover {
+        background-color: $dark;
+    }
+    &:focus, &.is-active {
+        box-shadow: none;
+    }
+}
+
+.button {
+    @include buttonvariant($gray, $darkgray, $darkergray);
+    transition: all 0.1s;
+    padding: 1em;
+    border-radius: $border-radius;
+    font-weight: 700;
+    font-size: 1em;
+    max-height: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:focus, &.is-active {
+        transform: translateX(-$depth) translateY(calc($depth * 3 / 2));
+    }
+
+    &.is-disabled {
+        @include disabled;
+    }
+
+    &.is-small {
+        max-height: 0.25em;
+        padding: 1em;
+        font-size: 0.75em;
+    }
+
+    &.is-large {
+        max-height: 1.5em;
+        font-size: 1.25em;
+        padding: 1.5em;
+    }
+
+    &.is-success {
+        @include buttonvariant($green, $darkgreen, $darkergreen);
+    }
+
+    &.is-warning {
+        @include buttonvariant($yellow, $darkyellow, $darkeryellow);
+    }
+
+    &.is-danger {
+        @include buttonvariant($red, $darkred, $darkerred);
+    }
+
+    &.is-info {
+        @include buttonvariant($blue, $darkblue, $darkerblue);
+    }
+}

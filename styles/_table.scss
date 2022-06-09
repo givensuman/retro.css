@@ -1,0 +1,53 @@
+.table {
+    background-color: $light;
+    border-collapse: collapse;
+    border-left: solid calc($border-width * 1.5) $brown;
+    border-bottom: solid calc($border-width * 1.5) $brown;
+    border-radius: 0.25em;
+
+    th, td {
+        padding: 0.25em 0.5em;
+        text-align: start;
+        margin: 0;
+        border: solid calc($border-width / 2) $brown;
+    }
+
+    th {
+        font-family: $title-font;
+        padding-top: 0.5em;
+        font-size: 1.25em;
+        border-width: calc($border-width / 2.5);
+        color: $brown;
+        font-weight: 400;
+    }
+
+    &.is-striped {
+        tr:nth-child(odd):not(:first-child) {
+            background-color: $darkgray;
+        }
+    }
+
+    &.with-wood {
+        th {
+            background-image: url('../assets/wallpaper_wood.png');
+            background-color: $brown;
+            color: $white;
+        }
+    }
+
+    &.with-scales {
+        th {
+            background-image: url('../assets/wallpaper_scales.png');
+            background-color: $darkerblue;
+            color: $white;
+        }
+    }
+
+    &.with-leaves {
+        th {
+            background-image: url('../assets/wallpaper_leaves.png');
+            background-color: $darkergreen;
+            color: $white;
+        }
+    }
+}

@@ -1,0 +1,53 @@
+.radio {
+    position: relative;
+    cursor: pointer;
+
+    input[type="radio"] {
+        -webkit-appearance: none;
+        appearance: none;
+        background-color: #fff;
+        margin: 0;
+        font: inherit;
+        color: $white;
+        width: 1.15em;
+        height: 1.15em;
+        border: 0.15em solid $darkergray;
+        border-radius: 50%;
+        transform: translateY(0.15em);
+        position: relative;
+        cursor: pointer;
+
+        &:checked {
+            &::before {
+                transform: scale(1);
+            }
+        }
+
+        &::before {
+            $radiosize: 0.65em;
+
+            content: "";
+            position: absolute;
+            top: 12%;
+            left: 12%;
+            width: $radiosize;
+            height: $radiosize;
+            border-radius: 50%;
+            transform: scale(1);
+            background-color: $white;
+            transition: 120ms transform ease-in-out;
+            box-shadow: inset 1em 1em $cyan;
+            z-index: 2;
+            cursor: pointer;
+            transform: scale(0);
+          }
+      }
+      
+    &.is-disabled {
+        @include disabled;
+        opacity: 1;
+        input[type="radio"] {
+            @include disabled;
+        }
+    }
+}

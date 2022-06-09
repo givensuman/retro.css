@@ -1,0 +1,14 @@
+.title {
+    color: $brown;
+    font-weight: bold;
+    font-family: $title-font;
+    font-size: 5rem;
+    text-shadow: 0.05em 0.05em $orange,
+        0.1em 0.1em $cyan;
+    cursor: default;
+}
+
+.subtitle {
+    font-family: $title-font;
+    color: $brown;
+}

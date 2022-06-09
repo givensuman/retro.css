@@ -1,0 +1,57 @@
+.card {
+    background-color: $light;
+    max-width: 300px;
+    padding: 2em;
+    border-radius: $border-radius;
+    border: solid $border-width $brown;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    color: $dark;
+    box-shadow: -0.2em 0.2em $brown;
+    color: $brown;
+    
+    header {
+        width: fit-content;
+        margin-right: auto;
+        margin-bottom: 1em;
+        font-size: 2em;
+        font-family: $title-font;
+    }
+
+    footer {
+        width: fit-content;
+        margin-left: auto;
+        margin-top: 1em;
+    }
+
+    &.with-wood {
+        background-image: url('../assets/wallpaper_wood.png');
+        background-color: $brown;
+        color: $white;
+
+        header {
+            color: $white;
+        }
+    }
+    &.with-scales {
+        background-image: url('../assets/wallpaper_scales.png');
+        background-color: $darkerblue;
+        color: $white;
+
+        header {
+            color: $white;
+        }
+    }
+    &.with-leaves {
+        background-image: url('../assets/wallpaper_leaves.png');
+        background-color: $darkergreen;
+        color: $white;
+
+        header {
+            color: $white;
+        }
+    }
+}

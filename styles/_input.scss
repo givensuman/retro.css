@@ -1,0 +1,61 @@
+@mixin inputvariant($base, $dark, $darker) {
+    $shadow: 
+    -1px 1px 0.1px $darker,
+    -2px 2px 0.1px $darker,
+    -3px 3px 0.1px $darker,
+    -4px 4px 0.1px $darker;
+
+    border: solid $border-width $dark;
+    box-shadow: $shadow;
+
+    &:hover {
+        background-color: $light;
+    }
+    
+    &:focus, &.is-active  {
+        box-shadow: $shadow,
+        -5px 5px 0.1px $darker,
+        -6px 6px 0.1px $darker;
+    }
+}
+
+.input {
+    @include inputvariant($gray, $darkgray, $darkergray);
+    padding: 0.5em;
+    border-radius: $border-radius;
+    transition: all 0.2s;
+    color: $dark;
+    background-color: $light;
+    font-size: 1em;
+
+    &:focus {
+        outline: none;
+        &:not(.is-active) {
+            transform: translateY(-2px) translateX(2px);
+        }
+    }
+
+    &.is-active {
+        transform: translateY(-2px) translateX(2px);
+    }
+
+    &.is-disabled {
+        @include disabled;
+    }
+
+    &.is-success {
+        @include inputvariant($green, $darkgreen, $darkergreen);
+    }
+
+    &.is-warning {
+        @include inputvariant($yellow, $darkyellow, $darkeryellow);
+    }
+
+    &.is-danger {
+        @include inputvariant($red, $darkred, $darkerred);
+    }
+
+    &.is-info {
+        @include inputvariant($blue, $darkblue, $darkerblue);
+    }
+}

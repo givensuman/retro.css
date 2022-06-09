@@ -1,0 +1,55 @@
+@mixin badgevariant($base, $dark, $darker) {
+    background-color: $base;
+    color: $darker;
+    border: solid $border-width $dark;
+}
+
+.badge {
+    @include badgevariant($gray, $darkgray, $darkergray);
+    padding: 0 0.5em;
+    border-radius: $border-radius;
+    font-size: 0.8em;
+    font-weight: bold;
+    cursor: default;
+
+    &.is-success {
+        @include badgevariant($green, $darkgreen, $darkergreen);
+    }
+
+    &.is-warning {
+        @include badgevariant($yellow, $darkyellow, $darkeryellow);
+    }
+
+    &.is-danger {
+        @include badgevariant($red, $darkred, $darkerred);
+    }
+
+    &.is-info {
+        @include badgevariant($blue, $darkblue, $darkerblue);
+    }
+}
+
+.badge-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    .badge {
+        border-radius: 0;
+
+        &:nth-child(1) {
+            border-radius: $border-radius 0 0 $border-radius;
+            margin-right: 0;
+            border-right-width: calc($border-radius / 3);
+            padding-right: 0.25em;
+        }
+        
+        &:last-child {
+            border-radius: 0 $border-radius $border-radius 0;
+            margin-left: 0;
+            border-left-width: calc($border-radius / 3);
+            padding-left: 0.25em;
+        }
+    }
+}

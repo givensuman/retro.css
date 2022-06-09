@@ -1,0 +1,119 @@
+.row {
+    display: flex;
+    flex-direction: row;
+
+    &.center-x { 
+        justify-content: center;
+    }
+    &.center-y {
+        align-items: center;
+    }
+    &.center {
+        justify-content: center;
+        align-items: center;
+    }    
+    &.top {
+        align-items: flex-start;
+    }
+    &.bottom {
+        align-items: flex-end;
+    }
+    &.left {
+        justify-content: flex-start;
+    }
+    &.right {
+        justify-content: flex-end;
+    }
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+
+    &.center-x {
+        align-items: center;
+    }
+    &.center-y {
+        justify-content: center;
+    }
+    &.center {
+        align-items: center;
+        justify-content: center;
+    }
+    &.top {
+        justify-content: flex-start;
+    }
+    &.bottom {
+        justify-content: flex-end;
+    }
+    &.left {
+        align-items: flex-start;
+    }
+    &.right {
+        align-items: flex-end;
+    }
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+@for $size from 0 through 100 {
+    .m-#{$size} {
+        margin: #{$size}px;
+    }
+    .my-#{$size} {
+        margin-top: #{$size}px;
+        margin-bottom: #{$size}px;
+    }
+    .mx-#{$size} {
+        margin-left: #{$size}px;
+        margin-right: #{$size}px;
+    }
+    .mt-#{$size} {
+        margin-top: #{$size}px;
+    }
+    .mr-#{$size} {
+        margin-right: #{$size}px;
+    }
+    .mb-#{$size} {
+        margin-bottom: #{$size}px;
+    }
+    .ml-#{$size} {
+        margin-left: #{$size}px;
+    }
+
+    .space-y-#{$size} > * {
+        margin-top: #{$size}px;
+        margin-bottom: #{$size}px;
+    }
+
+    .space-x-#{$size} > * {
+        margin-left: #{$size}px;
+        margin-right: #{$size}px;
+    }
+    
+    .p-#{$size} {
+        padding: #{$size}px;
+    }
+    .py-#{$size} {
+        padding-top: #{$size}px;
+        padding-bottom: #{$size}px;
+    }
+    .px-#{$size} {
+        padding-left: #{$size}px;
+        padding-right: #{$size}px;
+    }
+    .pt-#{$size} {
+        padding-top: #{$size}px;
+    }
+    .pr-#{$size} {
+        padding-right: #{$size}px;
+    }
+    .pb-#{$size} {
+        padding-bottom: #{$size}px;
+    }
+    .pl-#{$size} {
+        padding-left: #{$size}px;
+    }
+}

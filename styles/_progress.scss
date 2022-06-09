@@ -1,0 +1,67 @@
+@mixin progressvariant($base, $dark, $darker) {
+    &::-webkit-progress-bar {
+        outline: solid $border-width $dark;
+    }
+    &::-webkit-progress-value {
+        background-color: $base;
+    }
+    &:indeterminate {
+        &::-webkit-progress-bar {
+            background-image: 
+            repeating-linear-gradient(
+              -45deg, 
+              transparent, 
+              transparent 1rem,
+              $base 1rem,
+              $base 2rem
+            );
+        }
+    }
+}
+
+@keyframes barberpole {
+    from {
+        background-position: 0px 0px;
+    }
+    to {
+        background-position: 100% 100%;
+    }
+}
+
+.progress {
+    @include progressvariant($gray, $darkgray, $darkergray);
+    -webkit-appearance: none;
+    &::-webkit-progress-bar {
+        background-color: $light;
+        border-radius: $border-radius;
+        height: 1em;
+    }
+
+    &::-webkit-progress-value {
+        border-radius: $border-radius;
+    }
+
+    &:indeterminate {
+        &::-webkit-progress-bar {
+          background-size: 200% 200%;
+          animation: barberpole 1s linear infinite;
+          -webkit-animation: barberpole 1s linear infinite;
+        }
+    }
+
+    &.is-success {
+        @include progressvariant($green, $darkgreen, $darkergreen);
+    }
+
+    &.is-warning {
+        @include progressvariant($yellow, $darkyellow, $darkeryellow);
+    }
+
+    &.is-danger {
+        @include progressvariant($red, $darkred, $darkerred);
+    }
+
+    &.is-info {
+        @include progressvariant($blue, $darkblue, $darkerblue);
+    }
+}

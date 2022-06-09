@@ -1,0 +1,22 @@
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner {
+    position: relative;
+
+    &::before {
+        content: '';
+        height: 1.5em;
+        width: 1.5em;
+        position: absolute;
+        border: solid $border-width $darkergray;
+        border-radius: 1.5em;
+        border-right-color: transparent;
+        animation: spinner 0.75s linear infinite;
+        top: 0;
+        left: 0;
+    }
+}

@@ -1,0 +1,24 @@
+.textarea {
+    font-family: $body-font;
+    padding: 0.5em;
+    font-size: 1em;
+    border: solid $border-width $darkgray;
+    border-radius: $border-radius;
+    box-shadow: -1px 1px 0.1px $darkergray,
+    -2px 2px 0.1px $darkergray,
+    -3px 3px 0.1px $darkergray,
+    -4px 4px 0.1px $darkergray;
+    transition: all 0.2s, width 50ms, height 50ms;
+    background-color: $light;
+
+    &:focus {
+        outline: none;
+        box-shadow: -1px 1px 0.1px $darkergray,
+        -2px 2px 0.1px $darkergray,
+        -3px 3px 0.1px $darkergray,
+        -4px 4px 0.1px $darkergray,
+        -5px 5px 0.1px $darkergray,
+        -6px 6px 0.1px $darkergray;
+        transform: translateY(-2px) translateX(2px);
+    }
+}

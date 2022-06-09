@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+@font-face {
+    font-family: 'Kindest Reality';
+    src: url('../fonts/kindestreality-webfont.woff2') format('woff2'),
+         url('../fonts/kindestreality-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$border-radius: 0.5em;
+$border-width: 0.2em;
+
+$title-font: 'Kindest Reality';
+$body-font: 'Open Sans', sans-serif;
+
+$brown: #6F5643;
+$orange: #D2A24C;
+$white: #ECE6C2;
+$cyan: #73BDA8;
+
+$light: #F8F8F8;
+$dark: #181818;
+
+$gray: #DFE0DD;
+$darkgray: #CACCC6;
+$darkergray: #868784;
+
+$green: #C2E5CC;
+$darkgreen: #ADDDBB;
+$darkergreen: #519967;
+
+$yellow: #F3E895;
+$darkyellow: #DACE7C;
+$darkeryellow: #ADA77E;
+
+$red: #EE9A9B;
+$darkred: #EB8587;
+$darkerred: #CA4346;
+
+$blue: #80C4C6;
+$darkblue: #66B8BA;
+$darkerblue: #1A878A;
+
+@mixin disabled {
+    pointer-events: none;
+    user-select: none;
+    opacity: 0.5;
+}

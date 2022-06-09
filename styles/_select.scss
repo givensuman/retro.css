@@ -1,0 +1,46 @@
+@mixin selectvariant($base, $dark, $darker) {
+    border: solid $border-width $dark;
+
+    &:focus {
+        border-color: $darker;
+    }
+    &.is-active {
+        border-color: $darker;
+    }
+}
+
+.select {
+    @include selectvariant($gray, $darkgray, $darkergray);
+    padding: 0.5em 0.25em;
+    border-radius: $border-radius;
+    background-color: $light;
+    cursor: pointer;
+    font-size: 1em;
+    transition: all 0.2s;
+
+    &:focus {
+        outline: none;
+    }
+
+    &.is-disabled {
+        pointer-events: none;
+        user-select: none;
+        opacity: 0.5;
+    }
+
+    &.is-success {
+        @include selectvariant($green, $darkgreen, $darkergreen);
+    }
+
+    &.is-warning {
+        @include selectvariant($yellow, $darkyellow, $darkeryellow);
+    }
+
+    &.is-danger {
+        @include selectvariant($red, $darkred, $darkerred);
+    }
+
+    &.is-info {
+        @include selectvariant($blue, $darkblue, $darkerblue);
+    }
+}

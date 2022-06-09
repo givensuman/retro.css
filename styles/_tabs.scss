@@ -1,0 +1,36 @@
+$tab-border: calc($border-width / 2);
+
+.tabs {
+    display: flex;
+    flex-direction: row;
+    align-items: space-around;
+
+    button {
+        border: solid $border-width transparent;
+        border-radius: $border-radius $border-radius 0 0;
+        border-bottom: solid $tab-border $darkgray;
+        padding: 1em;
+        margin: 0;
+        transition: all 0.2s;
+        font-weight: bold;
+        font-size: 1em;
+        color: $darkergray;
+        cursor: pointer;
+        box-shadow: 0 $tab-border $darkgray;
+        &:hover {
+            background-color: $gray;
+        }
+
+        &.is-active {
+            border-color: $darkgray;
+            border-bottom: none;
+            background-color: $light;
+            color: $cyan;
+            cursor: default;
+            box-shadow: 0 $tab-border $gray;
+            &:hover {
+                background-color: $light;
+            }
+        }
+    }
+}
