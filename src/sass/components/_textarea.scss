@@ -1,6 +1,7 @@
 .textarea {
     font-family: $body-font;
     padding: 0.5em;
+    max-width: 350px;
     font-size: 1em;
     border: solid $border-width $darkgray;
     border-radius: $border-radius;

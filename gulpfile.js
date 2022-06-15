@@ -34,10 +34,14 @@ gulp.task('images', () => {
         .pipe(gulp.dest('./dist/assets'))
 })
 
-gulp.task('default', gulp.series(
-    'reset', 
-    'transpile', 
-    'minify',
-    'fonts',
-    'images'
-))
+gulp.task('default', () =>
+    gulp.watch('src/**/*.scss', 
+        gulp.series(
+            'reset', 
+            'transpile', 
+            'minify',
+            'fonts',
+            'images'
+        )
+    )
+)

@@ -58,7 +58,45 @@
     flex-wrap: wrap;
 }
 
+.m-auto {
+    margin: auto
+}
+.my-auto {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+.mt-auto {
+    margin-top: auto;
+}
+.mr-auto {
+    margin-right: auto;
+}
+.mb-auto {
+    margin-bottom: auto;
+}
+.ml-auto {
+    margin-left: auto;
+}
+
+
 @for $size from 0 through 100 {
+
+    .space-#{$size} > * {
+        margin: #{$size}px;
+    }
+    .space-y-#{$size} > * {
+        margin-top: #{$size}px;
+        margin-bottom: #{$size}px;
+    }
+    .space-x-#{$size} > * {
+        margin-left: #{$size}px;
+        margin-right: #{$size}px;
+    }
+    
     .m-#{$size} {
         margin: #{$size}px;
     }
@@ -81,18 +119,6 @@
     }
     .ml-#{$size} {
         margin-left: #{$size}px;
-    }
-
-    .space-#{$size} > * {
-        margin: #{$size}px;
-    }
-    .space-y-#{$size} > * {
-        margin-top: #{$size}px;
-        margin-bottom: #{$size}px;
-    }
-    .space-x-#{$size} > * {
-        margin-left: #{$size}px;
-        margin-right: #{$size}px;
     }
     
     .p-#{$size} {

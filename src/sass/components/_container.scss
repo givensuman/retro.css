@@ -1,0 +1,8 @@
+.container {
+    border: solid $border-width $brown;
+    padding: 1em;
+    border-radius: $border-radius;
+    max-width: 800px;
+    margin: 1em;
+    position: relative;
+}

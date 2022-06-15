@@ -6,14 +6,14 @@
         -webkit-appearance: none;
         appearance: none;
         background-color: #fff;
-        margin: 0;
+        margin-right: 0.25em;
         font: inherit;
         color: $white;
         width: 1.15em;
         height: 1.15em;
         border: 0.15em solid $darkergray;
         border-radius: 50%;
-        transform: translateY(0.15em);
+        transform: translateY(0.3em);
         position: relative;
         cursor: pointer;
 
@@ -28,8 +28,8 @@
 
             content: "";
             position: absolute;
-            top: 12%;
-            left: 12%;
+            top: 0.1em;
+            left: 0.1em;
             width: $radiosize;
             height: $radiosize;
             border-radius: 50%;
