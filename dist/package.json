@@ -1,0 +1,21 @@
+{
+    "name": "retro.css",
+    "description": "A 60s-themed CSS kit",
+    "homepage": "https://retrocss.netlify.app",
+    "repository": {
+        "type": "git",
+        "url": "https://www.github.com/givensuman/retro.css"
+    },
+    "version": "1.0.0",
+    "keywords": [
+        "scss",
+        "sass",
+        "css",
+        "kit",
+        "60s",
+        "sixties",
+        "retro",
+        "ui"
+    ]
+  }
+  

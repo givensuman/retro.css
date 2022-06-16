@@ -7,31 +7,31 @@ const imagemin = require('gulp-imagemin')
 const cache = require('gulp-cache')
 
 gulp.task('reset', () => {
-    return del(['dist/**', '!dist'])
+    return del(['build/**', '!build'])
 })
 
 gulp.task('transpile', () => {
     return gulp.src('./src/sass/**/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./dist/css'))
+        .pipe(gulp.dest('./build/css'))
 })
 
 gulp.task('minify', () => {
-    return gulp.src('./dist/css/index.css')
+    return gulp.src('./build/css/index.css')
         .pipe(cssnano())
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('./dist/css'))
+        .pipe(gulp.dest('./build/css'))
 })
 
 gulp.task('fonts', () => {
     return gulp.src('./src/fonts/**/*')
-        .pipe(gulp.dest('./dist/fonts'))
+        .pipe(gulp.dest('./build/fonts'))
 })
 
 gulp.task('images', () => {
     return gulp.src('./src/assets/*.+(png|svg)')
         .pipe(cache(imagemin()))
-        .pipe(gulp.dest('./dist/assets'))
+        .pipe(gulp.dest('./build/assets'))
 })
 
 gulp.task('default', () =>
