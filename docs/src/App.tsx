@@ -14,6 +14,7 @@ import List from './components/List'
 import Progress from './components/Progress'
 import Radio from './components/Radio'
 import Select from './components/Select'
+import Spinner from './components/Spinner'
 import Table from './components/Table'
 import Tab from './components/Tab'
 import Textarea from './components/Textarea'
@@ -43,8 +44,9 @@ function App() {
     { name: 'Progress', el: <Progress />},
     { name: 'Radios', el: <Radio /> },
     { name: 'Selects', el: <Select /> },
-    { name: 'Tables', el: <Table /> },
+    { name: 'Spinners', el: <Spinner /> },
     { name: 'Tabs', el: <Tab /> },
+    { name: 'Tables', el: <Table /> },
     { name: 'Textarea', el: <Textarea /> },
     { name: 'Titles', el: <Title /> },
     { name: '🔨 Utilities', el: <Utilities /> }

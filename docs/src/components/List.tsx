@@ -28,23 +28,23 @@ export default () =>  {
                 </ol>
             </div>
             <Code code={`
-<div className="row center-x space-x-15">
-    <ul role="list" className="list">
+<div class="row center-x space-x-15">
+    <ul role="list" class="list">
         <li>Far out</li>
         <li>Bodacious</li>
         <li>Radical</li>
     </ul>
-    <ul role="list" className="list with-peace-signs">
+    <ul role="list" class="list with-peace-signs">
         <li>Far out</li>
         <li>Bodacious</li>
         <li>Radical</li>
     </ul>
-    <ol role="list" className="list with-rainbows">
+    <ol role="list" class="list with-rainbows">
         <li>Far out</li>
         <li>Bodacious</li>
         <li>Radical</li>
     </ol>
-    <ol role="list" className="list with-stars">
+    <ol role="list" class="list with-stars">
         <li>Far out</li>
         <li>Bodacious</li>
         <li>Radical</li>

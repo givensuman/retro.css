@@ -5,7 +5,7 @@ export default () =>  {
     return (
         <Wrapper>
             <h2 className="subtitle">Selects</h2>
-            <div className="row wrap center-x space-10">
+            <div className="row wrap space-10">
                 <select className="select">
                 <option>Far out</option>
                 <option>Bodacious</option>
@@ -43,7 +43,7 @@ export default () =>  {
                 </select>
             </div>
             <Code code={`
-<div class="row wrap center-x space-10">
+<div class="row wrap space-10">
     <select class="select">
         <option>Far out</option>
         <option>Bodacious</option>

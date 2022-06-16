@@ -5,7 +5,7 @@ export default () =>  {
     return (
         <Wrapper>
             <h2 className="subtitle">Tables</h2>
-            <div className="row center-x wrap space-10">
+            <div className="row wrap space-10">
                 <table className="table">
                     <tr>
                         <th>Event</th>
@@ -98,7 +98,7 @@ export default () =>  {
                 </table>
                 </div>
             <Code code={`
-<div class="row center-x wrap space-10">
+<div class="row wrap space-10">
 <table class="table">
     <tr>
         <th>Event</th>

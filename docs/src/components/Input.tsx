@@ -5,7 +5,7 @@ export default () =>  {
     return (
         <Wrapper>
             <h2 className="subtitle">Inputs</h2>
-            <div className="col center-x space-y-5">
+            <div className="col space-y-5">
                 <input className="input" placeholder="Vibe" />
                 <input className="input is-active" placeholder="Dig it" />
                 <input className="input is-disabled" placeholder="Bogart" />
