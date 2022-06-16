@@ -18,7 +18,10 @@ export default ({ code }: Props) => {
     }
 
     return (
-        <div className="container">
+        <div 
+        style={{ maxWidth: '600px' }}
+        className="container"
+        >
             <button
             className="button is-small"
             onClick={() => {

@@ -1,9 +1,11 @@
+import Wrapper from "../views/Wrapper"
+
 export default () => {
     return (
-        <div className="col">
-            <h2 className="subtitle">Utilities</h2>
-            <div className="container col center-x">
-                Retro.css comes with a few easy utility classes to help manage layout of components. Because many elements have heavily borders and box-shadows, they may overlap adjacent elements. Use these utilities to create a layout suitable to your taste.
+        <Wrapper>
+            <div className="col">
+                <h2 className="subtitle">Utilities</h2>
+                Retro.css comes with a few easy utility classes to help manage layout of components. Because many elements have stylized borders and box-shadows, they may overlap adjacent elements. Use these utilities to create a layout suitable to your taste.
 
                 <table className="table mt-50 is-striped">
                     <tr>
@@ -143,6 +145,6 @@ export default () => {
                     </tr>
                 </table>
             </div>
-        </div>
+        </Wrapper>
     )
 }
