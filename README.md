@@ -1,4 +1,4 @@
-# Retro .css
+# Retro.css
 ### A CSS kit from the sixties ✌
 
 ---
