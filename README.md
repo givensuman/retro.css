@@ -25,4 +25,4 @@ npx degit givensuman/retro.css/dist
 ```
 and import accordingly.
 
-Visit the docs for class coverage and examples here.
+Visit the docs for class coverage and examples [here](https://retrocss.netlify.app "Retro.css docs").
