@@ -16,5 +16,8 @@
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.1.0",
     "sass": "^1.52.2"
+  },
+  "dependencies": {
+    "framer-motion": "^6.3.11"
   }
 }

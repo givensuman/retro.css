@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-
+import { useState } from 'react'
 import { GiPreviousButton, GiNextButton } from 'react-icons/gi'
+import { AnimatePresence, motion } from 'framer-motion'
 
 import GettingStarted from './components/GettingStarted'
 import Badge from './components/Badge'
@@ -78,7 +78,7 @@ function App() {
         >
           {components.map(el => 
             <option key={el.name}>
-              {el.name}
+                {el.name}
             </option>
           )}
         </select>
@@ -90,9 +90,16 @@ function App() {
         </button>
       </div>
 
-      <div className="row center-x mt-50">
+      <AnimatePresence>
+      <motion.div 
+      className="row center-x mt-50"
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      key={components[index].name}
+      >
         {components[index].el}
-      </div>
+      </motion.div>
+      </AnimatePresence>
 
     </div>
   )
