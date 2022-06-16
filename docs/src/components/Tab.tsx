@@ -11,6 +11,7 @@ export default () =>  {
                 <button>Radical</button>
             </div>
             <Code code={`
+<!-- Use JS to change active tab -->
 <div class="tabs my-25">
     <button class="is-active">Far out</button>
     <button>Bodacious</button>
