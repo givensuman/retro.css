@@ -5,9 +5,9 @@
 
 To install with node, run 
 ```
-# npm
+# with npm
 npm install retro.css
-# yarn 
+# or, with yarn 
 yarn add retro.css 
 ```
 and import the main stylesheet.
