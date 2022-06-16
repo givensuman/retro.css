@@ -14,6 +14,11 @@ export default () => {
                         <th>Description</th>
                     </tr>
                     <tr>
+                        <td>.app</td>
+                        <td>-</td>
+                        <td>Creates a full-page body wrapper with off-white background (like on this page!)</td>
+                    </tr>
+                    <tr>
                         <td>.m-*</td>
                         <td>1-100 or "auto"</td>
                         <td>Applies a margin</td>
